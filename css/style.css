@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+/* 
+:root{
+
+} */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  background: var(--bg-img);
+  background-size: cover;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.theme-light {
+  --bg-img: url(../JS-Homework-3/images/  
+    bg-desktop-light.jpg);
+  --main-bg: #f2f2f2;
+  --todo-bg: #ffffff;
+  --todo-shodow: rgb(26, 27, 40);
+  --font-color: rgb(147, 148, 165);
+  --font-color-hover: rgb(20, 21, 31);
+  --btn-border: #777a92;
+  --input-placeholder: #484b6a;
+}
+
+.theme-dark {
+  --bg-img: url(../JS-Homework-3/images/bg-desktop-dark.jpg);
+  --main-bg: rgb(26, 27, 40);
+  --todo-bg: rgb(39, 41, 63);
+  --todo-shodow: rgb(26, 27, 40);
+  --font-color: rgb(202, 205, 232);
+  --font-color-hover: rgb(255, 255, 255);
+  --btn-border: #777a92;
+  --input-placeholder: #484b6a;
+}
+
+#app {
+  width: 100%;
+  height: 713px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 300px;
+  background-image: url("../images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  width: 540px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.header h1 {
+  width: 167px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 8px;
+  color: #ffffff;
+}
+
+.theme-changer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-changer img {
+  width: 30px;
+  height: 30px;
+}
+#cycle {
+  width: 24px;
+  height: 24px;
+  margin: auto 24px;
+  border-radius: 50%;
+  background: var(--todo-bg);
+  border: 1px solid #e3e4f1;
+  cursor: pointer;
+}
+
+.form {
+  width: 540px;
+  margin: -162px auto;
+}
+
+label {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.add-todo {
+  position: relative;
+  background: var(--todo-bg);
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+  height: 60px;
+}
+
+.add-todo button {
+  border-radius: 50%;
+  border: 1px solid var(--btn-border);
+  outline: none;
+  background: none;
+  width: 24px;
+  height: 20px;
+  position: relative;
+  margin: auto 15px;
+}
+
+.add-todo input {
+  font-family: "Josefin Sans";
+  width: 100%;
+  height: 50px;
+  background-color: var(--todo-bg);
+  color: var(--input-placeholder);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  padding: 10px 10px 10px 0px;
+  border-radius: 8px;
+  border: none;
+}
+
+.todo-list ul {
+  margin-top: 20px;
+  border-top-left-radius: 8px;
+}
+.todo-list li {
+  width: 100%;
+  background-color: #fafafa;
+  height: 50px;
+  color: #484b6a;
+  padding: 15px;
+  border-bottom: 1px solid #d2d3db;
+}
+
+.todo-list input {
+  border: 1px solid #777a92;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-list input:checked {
+  background: url("/images/icon-check.svg"), linear-gradient(#57ddff, #c058f3);
+  border: none;
+}
+
+.todo-list:checked ~ .text {
+  text-decoration: line-through;
+  color: #d2d3db;
+}
+
+.remove {
+  background: url("/images/icon-cross.svg");
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.bottom-items {
+  width: 100%;
+  height: 50px;
+  background-color: var(--todo-bg);
+  padding: 15px;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.clear {
+  cursor: pointer;
+}
+.clear:hover {
+  color: #484b6a;
+}
+.filters input[type="radio"] {
+  opacity: 0;
+}
+.filters label:hover {
+  color: #484b6a;
+}
+
+.filters input[type="radio"]:checked span {
+  color: #3a7bfd;
+}
+.dragdrop {
+  width: 100%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.194444px;
+  color: #9495a5;
+  bottom: 20px;
+  align-self: center;
+}
+.mobile {
+  display: none;
+}
+
+

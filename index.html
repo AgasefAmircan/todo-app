@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+    <link rel="stylesheet" href="../JS-Homework-3/css/style.css" />
+  </head>
+  <body class="theme-light">
+    <main id="app">
+      <div class="header">
+        <div class="main-header">
+          <h1>TODO</h1>
+          <div class="theme-changer">
+            <button>
+              <img src="./images/icon-moon.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="add-todo flex">
+          <!-- <button id="cycle"></button> -->
+         <button> </button>
+          <input type="text" placeholder="Create new todo" />
+        </div>
+        <div class="todo-list flex">
+          <ul  id="list-item">
+            <!-- <li>
+              <label for="" class="list-item">
+                <button id="cycle"></button>
+                <input type="checkbox" checked />
+                <span class="text">Todo 1</span>
+                <span class="check-mark"></span>
+              </label>
+            </li> -->
+          </ul>
+        </div>
+        <div class="mobile">
+          <div class="count"><span>1</span> items left</div>
+          <div class="mobile-clear">Clear Completed</div>
+        </div>
+        <div class="bottom-items flex">
+          <div class="count"><span>1</span> items left</div>
+          <div class="filters flex">
+            <label for="">
+              <input type="radio" id="all" />
+              <span>All</span>
+            </label>
+            <label for="">
+              <input type="radio" id="active" />
+              <span>Active</span>
+            </label>
+            <label for="">
+              <input type="radio" id="completed" />
+              <span>Completed</span>
+            </label>
+          </div>
+         <div class="clear">Clear completed</div>
+        </div>
+      </div>
+      <div class="dragdrop">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
