@@ -11,14 +11,34 @@
   margin: 0;
   padding: 0;
 }
-link{
+link {
   display: block;
 }
 
+html {
+  --bg-img: url(../images/bg-desktop-light.jpg);
+  --main-bg: #f2f2f2;
+  --todo-bg: #ffffff;
+  --todo-shodow: rgb(26, 27, 40);
+  --font-color: rgb(147, 148, 165);
+  --font-color-hover: rgb(20, 21, 31);
+  --btn-border: #777a92;
+  --input-placeholder: #484b6a;
+}
+html[data-theme='dark'] {
+  --bg-img: url(../images/bg-desktop-dark.jpg);
+  --main-bg: rgb(26, 27, 40);
+  --todo-bg: #25273c;
+  --todo-shodow: rgb(26, 27, 40);
+  --font-color: rgb(202, 205, 232);
+  --font-color-hover: rgb(255, 255, 255);
+  --btn-border: #777a92;
+  --input-placeholder: #484b6a;
+}
 body {
   background-color: var(--main-bg);
   color: var(--font-color);
-  background: var(--bg-img);
+  /* background: var(--bg-img); */
   background-size: cover;
   font-family: "Josefin Sans";
   font-size: 18px;
@@ -33,7 +53,7 @@ body {
   flex-flow: row nowrap;
 }
 
-.theme-light {
+/* .theme-light {
   --bg-img: url(../JS-Homework-3/images/  
     bg-desktop-light.jpg);
   --main-bg: #f2f2f2;
@@ -54,7 +74,7 @@ body {
   --font-color-hover: rgb(255, 255, 255);
   --btn-border: #777a92;
   --input-placeholder: #484b6a;
-}
+} */
 
 #app {
   width: 100%;
@@ -64,7 +84,7 @@ body {
 
 .header {
   height: 300px;
-  background-image: url("../images/bg-desktop-light.jpg");
+  background-image: var(--bg-img);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -234,5 +254,3 @@ label {
 .mobile {
   display: none;
 }
-
-
