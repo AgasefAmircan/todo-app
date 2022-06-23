@@ -16,3 +16,5 @@ themeIcon.addEventListener('click', function(){
 /*  Add Items  */
 const AddTodo=document.querySelector('.add-todo');
 const TodoBtn=document.querySelector('.add-todo button');
+const TodoList=document.querySelector('.todo-list');
+
