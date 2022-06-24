@@ -19,37 +19,51 @@
           </div>
         </div>
       </div>
-      <div class="form">
+      <form id="user-form" class="form">
         <div class="add-todo flex">
-         <button> </button>
-          <input type="text" placeholder="Create new todo" />
+         <button class="btn"> </button>
+          <input name="add-todo" id="add-todo" aria-label="add-todo" type="text" placeholder="Create new todo" />
         </div>
         <div class="todo-list flex">
           <ul  id="list-item">
           </ul>
         </div>
         <div class="mobile">
-          <div class="count"><span>1</span> items left</div>
+          <div class="mobile-count"><span></span> items left</div>
           <div class="mobile-clear">Clear Completed</div>
         </div>
         <div class="bottom-items flex">
-          <div class="count"><span>1</span> items left</div>
+          <div class="count"><span></span> items left</div>
           <div class="filters flex">
             <label for="">
-              <input type="radio" id="all" />
+              <input type="radio" name="filter" id="all" checked />
               <span>All</span>
             </label>
             <label for="">
-              <input type="radio" id="active" />
+              <input type="radio" name="filter" id="active" />
               <span>Active</span>
             </label>
             <label for="">
-              <input type="radio" id="completed" />
+              <input type="radio" name="filter" id="completed" />
               <span>Completed</span>
             </label>
           </div>
          <div class="clear">Clear completed</div>
         </div>
+      </form>
+      <div class="filters mobile-filters">
+        <label for="">
+          <input type="radio" name="filter" id="all" checked />
+          <span>All</span>
+        </label>
+        <label for="">
+          <input type="radio" name="filter" id="active" />
+          <span>Active</span>
+        </label>
+        <label for="">
+          <input type="radio" name="filter" id="completed" />
+          <span>Completed</span>
+        </label>
       </div>
       <div class="dragdrop">
         <p>Drag and drop to reorder list</p>
