@@ -157,12 +157,7 @@ ul li.hidden{
 ul li .remove{
   display: block;
 }
-.todo-list{
-  max-height: 300px;
-  scroll-behavior: smooth;
-  max-width: 550px;
-  width: 100%;
-}
+
 .todo-list ul {
   max-width: 550px;
   width: 100%;
@@ -170,8 +165,6 @@ ul li .remove{
   border-top-left-radius: 8px;
 }
 .todo-list ul li {
-  max-width: 550px;
-  width: 100%;
   background-color: var(--main-bg);
   height: 50px;
   color: #484b6a;
