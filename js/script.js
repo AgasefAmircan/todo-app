@@ -2,12 +2,12 @@
 const themeIcon = document.querySelector(".theme-icon");
 
 themeIcon.addEventListener("click", function () {
-  if (document.documentElement.dataset.theme === "light") {
-    document.documentElement.dataset.theme = "dark";
-    themeIcon.src = "./images/icon-sun.svg";
-  } else {
+  if (document.documentElement.dataset.theme === "dark") {
     document.documentElement.dataset.theme = "light";
     themeIcon.src = "./images/icon-moon.svg";
+  } else {
+    document.documentElement.dataset.theme = "dark";
+    themeIcon.src = "./images/icon-sun.svg";
   }
 });
 
@@ -30,9 +30,11 @@ function addItems(text) {
   item.innerHTML = 
   `
   <label class="list">
+  <label>
   <input class="checkbox" type="checkbox" />
   <span class="text">${text}</span>
-  <span class="remove"></span>
+  </label>
+  <span class="remove">x</span>
   </label>
   
   `;

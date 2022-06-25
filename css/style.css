@@ -110,6 +110,7 @@ label {
   position: relative;
   cursor: pointer;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -176,7 +177,6 @@ ul li .remove{
   color: #484b6a;
   padding: 15px;
   border-bottom: 1px solid #d2d3db;
-  justify-content: space-between;
 }
 
 .todo-list input {
@@ -192,6 +192,10 @@ ul li .remove{
   background: url("/images/icon-check.svg"), linear-gradient(#57ddff, #c058f3);
   border: none;
 }
+.list-item li .list{
+  display: flex;
+  justify-content: space-between;
+}
 
 .list .checkbox:checked ~ .text {
   text-decoration: line-through;
@@ -199,11 +203,17 @@ ul li .remove{
 }
 
 .remove {
-  background: url('/images/icon-cross.svg');
-  background:none;
-  width: 15px;
-  height: 15px;
+  background:transparent;
+  color: #5B5E7E;
+  width: 24px;
+  height: 19px;
+  text-align: center;
   cursor: pointer;
+}
+.remove:hover{
+  background-color: #b6b7cc;
+  border-radius: 20px;
+  font-size: 18px;
 }
 
 .bottom-items {
@@ -211,7 +221,7 @@ ul li .remove{
   height: 50px;
   background-color: var(--input-bg);
   padding: 15px;
-  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  /* box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5); */
   border-radius: 5px;
   justify-content: space-between;
 }
@@ -237,7 +247,7 @@ ul li .remove{
 }
 .dragdrop {
   width: 100%;
-  position: absolute;
+  position: fixed;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
